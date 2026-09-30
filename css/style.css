@@ -1,0 +1,221 @@
+:root {
+    --primary-color: #2e7d32;
+    --primary-dark: #1b5e20;
+    --accent-color: #81c784;
+    --bg-color: #f4f6f5;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --text-muted: #666666;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.8rem;
+}
+
+header p {
+    margin: 0;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 5px solid var(--primary-color);
+}
+
+.card.locked {
+    border-left-color: #ccc;
+    opacity: 0.8;
+    background-color: #fafafa;
+}
+
+.card:not(.locked):hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--primary-dark);
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.badge.open {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge.upcoming {
+    background-color: #fff8e1;
+    color: #f57f17;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn.disabled {
+    background-color: #e0e0e0;
+    color: #9e9e9e;
+    pointer-events: none;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: var(--primary-dark);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.question-block {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.question-block:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.question-title {
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #222;
+}
+
+.options label {
+    display: block;
+    font-weight: normal;
+    padding: 0.4rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.1s;
+    color: var(--text-color);
+}
+
+.options label:hover {
+    background-color: #f1f8f1;
+}
+
+.options input {
+    margin-right: 0.5rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+#loading {
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-dark);
+    margin-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
