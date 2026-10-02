@@ -1,5 +1,5 @@
 // Substitua pela URL do seu Web App do Google Apps Script
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyyVwn3PI08DADpQpXXJxpmkuWCMiAK6L3Yo0jStuOeDQTQFbmFHAqEAaG8KXv847Wjdg/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwKiaNpbeYjKZ-VEuGFuVI0dSy9TMTRe_sGsqUdF7TElG5zSlpKc1L0u1TrL-RWiOTWww/exec";
 
 async function finalizarAtividade() {
     const nome = document.getElementById('nome').value.trim();
@@ -38,6 +38,7 @@ async function finalizarAtividade() {
     const dataHoraEnvio = new Date().toLocaleString('pt-BR');
 
     const dadosEnvio = {
+        atividade: "Atividade 1", // <--- Adicionado para registrar na planilha
         nome: nome,
         chamada: chamada,
         turma: turma,
@@ -66,7 +67,7 @@ async function finalizarAtividade() {
 
         doc.setFont("helvetica", "bold");
         doc.setFontSize(16);
-        doc.text("Comprovante de Atividade Complementar", 20, 20);
+        doc.text("Comprovante de Atividade Complementar - Atividade 1", 20, 20); // <--- Ajustado no PDF
         
         doc.setFontSize(11);
         doc.setFont("helvetica", "normal");
