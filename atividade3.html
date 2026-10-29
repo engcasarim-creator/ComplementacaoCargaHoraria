@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3: Agricultura Digital e Semeadura de Precisão</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Importação do jsPDF para gerar o comprovante em PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Atividade 3: Agricultura Digital e Semeadura de Precisão</h1>
+        <p>Curso Técnico em Agropecuária - Carga Horária Complementar</p>
+    </header>
+
+    <div class="container">
+        <a href="main.html" class="back-link">&larr; Voltar para a página principal</a>
+
+        <form id="quizForm">
+            <!-- Bloco de Identificação -->
+            <div class="card">
+                <h2>Identificação do Aluno</h2>
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="chamada">Número da Chamada:</label>
+                    <input type="text" id="chamada" required placeholder="Ex: 14">
+                </div>
+                <div class="form-group">
+                    <label for="turma">Turma:</label>
+                    <input type="text" id="turma" required placeholder="Ex: Agropecuária 2º Ano A">
+                </div>
+            </div>
+
+            <!-- Bloco de Questões (1 a 10) -->
+            <div class="card">
+                <h2>Bloco de Questões (1 a 10)</h2>
+
+                <!-- Q1 -->
+                <div class="question-block">
+                    <div class="question-title">1. Qual é o principal objetivo da aplicação da Agricultura de Precisão (AP) nos sistemas modernos de semeadura?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="A" required> A) Aumentar o consumo de combustíveis fósseis das máquinas agrícolas.</label>
+                        <label><input type="radio" name="q1" value="B"> B) Garantir a distribuição uniforme de sementes e otimizar a densidade de plantio conforme a variabilidade do solo.</label>
+                        <label><input type="radio" name="q1" value="C"> C) Substituir totalmente a necessidade de tratores por tração animal.</label>
+                        <label><input type="radio" name="q1" value="D"> D) Eliminar o uso de fertilizantes químicos em qualquer tipo de lavoura.</label>
+                        <label><input type="radio" name="q1" value="E"> E) Acelerar a colheita mecânica de grãos graúdos.</label>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="question-block">
+                    <div class="question-title">2. No contexto das tecnologias embarcadas, qual componente é fundamental para o posicionamento geoespacial em tempo real durante as operações de plantio?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="A" required> A) Sistema GNSS / GPS agrícola</label>
+                        <label><input type="radio" name="q2" value="B"> B) Tacógrafo mecânico de painel</label>
+                        <label><input type="radio" name="q2" value="C"> C) Bomba injetora de combustível convencional</label>
+                        <label><input type="radio" name="q2" value="D"> D) Dinamômetro de barra de tração</label>
+                        <label><input type="radio" name="q2" value="E"> E) Sensor analógico de nível de óleo hidráulico</label>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="question-block">
+                    <div class="question-title">3. O que são e para que servem os mecanismos de controle de seção (ou desligamento bocal a bocal) em semeadoras de precisão modernas?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="A" required> A) Aumentar a velocidade de deslocamento do trator nas cabeceiras da lavoura.</label>
+                        <label><input type="radio" name="q3" value="B"> B) Evitar a sobreposição de sementes e adubo em áreas já plantadas (como arremates e cabeceiras), economizando insumos.</label>
+                        <label><input type="radio" name="q3" value="C"> C) Regular a pressão dos pneus automaticamente conforme a umidade do solo.</label>
+                        <label><input type="radio" name="q3" value="D"> D) Realizar a limpeza mecânica dos discos de corte sem parar o trator.</label>
+                        <label><input type="radio" name="q3" value="E"> E) Acoplar implementos traseiros de forma hidráulica simplificada.</label>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="question-block">
+                    <div class="question-title">4. Nas semeadoras-adubadoras de plantio direto, qual é a função principal do disco de corte (disco ondulado ou liso) localizado na parte frontal da linha de plantio?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="A" required> A) Compactar a semente no fundo do sulco para reter umidade.</label>
+                        <label><input type="radio" name="q4" value="B"> B) Cortar a palhada e os resíduos vegetais depositados na superfície do solo, abrindo caminho para o sulcador.</label>
+                        <label><input type="radio" name="q4" value="C"> C) Distribuir o adubo mineral a lanço na superfície da lavoura.</label>
+                        <label><input type="radio" name="q4" value="D"> D) Medir a velocidade instantânea de deslocamento do conjunto trator-semeadora.</label>
+                        <label><input type="radio" name="q4" value="E"> E) Substituir o sistema de freios pneumáticos do trator.</label>
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="question-title">5. Os dosadores de sementes pneumáticos (a vácuo) utilizam discos alveolados e pressão negativa. Qual é a principal vantagem desse sistema em comparação aos dosadores mecânicos tradicionais (horizontais ou verticais)?</div>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A" required> A) Reduzir drasticamente a precisão do espaçamento entre sementes.</label>
+                    <label><input type="radio" name="q5" value="B"> B) Permitir altas velocidades de plantio com menor índice de falhas e duplos (sべきssementes grudadas), adaptando-se melhor a diferentes tamanhos de sementes.</label>
+                    <label><input type="radio" name="q5" value="C"> C) Funcionar sem necessidade de eletricidade ou bateria no trator.</label>
+                    <label><input type="radio" name="q5" value="D"> D) Plantar sementes sem que haja necessidade de abrir sulcos no solo.</label>
+                    <label><input type="radio" name="q5" value="E"> E) Exigir potências de tracionamento extremamente baixas.</label>
+                </div>
+            </div>
+
+            <!-- Q6 a Q10 -->
+            <div class="card">
+                <h2>Continuação das Questões (6 a 10)</h2>
+
+                <!-- Q6 -->
+                <div class="question-block">
+                    <div class="question-title">6. O que avalia o índice de espaçamento conhecido como "falhas" e "duplos" na distribuição longitudinal de sementes monitoradas por sensores óticos?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="A" required> A) A quantidade de combustível gasto por hectare.</label>
+                        <label><input type="radio" name="q6" value="B"> B) A ocorrência de espaços vazios maiores que o normal entre sementes (falhas) ou sementes depositadas muito próximas/unidas (duplos).</label>
+                        <label><input type="radio" name="q6" value="C"> C) O nível de compactação em profundidade causado pelas rodas de compactação traseiras.</label>
+                        <label><input type="radio" name="q6" value="D"> D) O teor de matéria orgânica presente na linha de adubação.</label>
+                        <label><input type="radio" name="q6" value="E"> E) A inclinação lateral da semeadora em terrenos declivosos.</label>
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="question-block">
+                    <div class="question-title">7. Qual é a finalidade principal das rodas compactadoras (geralmente em "V") posicionadas logo após o fechamento do sulco de semeadura?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="A" required> A) Retirar o excesso de umidade do solo ao redor da semente.</label>
+                        <label><input type="radio" name="q7" value="B"> B) Promover o contato adequado entre a semente e as partículas de solo úmido, garantindo a absorção de água para a germinação.</label>
+                        <label><input type="radio" name="q7" value="C"> C) Distribuir sementes miúdas a lanço de forma superficial.</label>
+                        <label><input type="radio" name="q7" value="D"> D) Servir como elemento de tração auxiliar para empurrar a semeadora.</label>
+                        <label><input type="radio" name="q7" value="E"> E) Evitar completamente a erosão hídrica em linhas de enxurrada.</label>
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="question-block">
+                    <div class="question-title">8. No painel de controle (monitor de plantio) dentro da cabine do trator, o operador consegue visualizar em tempo real informações críticas da operação. Qual item NÃO é medido diretamente pelos monitores de plantio modernos?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="A" required> A) População de sementes por hectare.</label>
+                        <label><input type="radio" name="q8" value="B"> B) Velocidade de plantio.</label>
+                        <label><input type="radio" name="q8" value="C"> C) O sabor e a qualidade nutricional do grão colhido na safra anterior.</label>
+                        <label><input type="radio" name="q8" value="D"> D) Mapas de ocorrência de falhas e duplos.</label>
+                        <label><input type="radio" name="q8" value="E"> E) Hectares efetivamente plantados.</label>
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="question-block">
+                    <div class="question-title">9. O que caracteriza o sistema de taxa variável de semeadura (VSR - Variable Rate Seeding) integrado à agricultura digital?</div>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="A" required> A) A alteração automática da quantidade de sementes distribuídas por metro com base em mapas de recomendação pré-carregados (zonas de manejo).</label>
+                        <label><input type="radio" name="q9" value="B"> B) O plantio executado exclusivamente de forma manual pelos operadores.</label>
+                        <label><input type="radio" name="q9" value="C"> C) A manutenção fixa de uma única densidade de plantas em toda a extensão da propriedade.</label>
+                        <label><input type="radio" name="q9" value="D"> D) A troca de marchas da transmissão mecânica do trator sem uso de embreagem.</label>
+                        <label><input type="radio" name="q9" value="E"> E) O ajuste manual da profundidade do sulco a cada 10 metros de percurso.</label>
+                    </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="question-block">
+                    <div class="question-title">10. Identifique entre os componentes abaixo aquele que pertence especificamente ao sistema de distribuição de adubo (e não de sementes) em uma semeadora-adubadora:</div>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="A" required> A) Dosador pneumático a vácuo.</label>
+                        <label><input type="radio" name="q10" value="B"> B) Disco alveolado de milho.</label>
+                        <label><input type="radio" name="q10" value="C"> C) Sistema dosador de rosca sem-fim (helicoidal) ou rotor acanalado para fertilizantes.</label>
+                        <label><input type="radio" name="q10" value="D"> D) Sensor óptico de contagem de sementes no tubo condutor.</label>
+                        <label><input type="radio" name="q10" value="E"> E) Disco de corte frontal de palhada.</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="button" class="btn" onclick="finalizarAtividade()">Finalizar Atividade e Gerar PDF</button>
+            <div id="loading">Enviando respostas e gerando PDF, aguarde...</div>
+        </form>
+    </div>
+
+    <!-- Chamada do arquivo JavaScript externo -->
+    <script src="js/atividade3.js"></script>
+</body>
+</html>
